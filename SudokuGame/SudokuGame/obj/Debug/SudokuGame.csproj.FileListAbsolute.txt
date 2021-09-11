@@ -1,0 +1,11 @@
+c:\users\x\documents\visual studio 2015\Projects\SudokuGame\SudokuGame\bin\Debug\SudokuGame.exe.config
+C:\Users\x\Documents\Visual Studio 2015\Projects\SudokuGame\SudokuGame\bin\Debug\SudokuGame.exe
+C:\Users\x\Documents\Visual Studio 2015\Projects\SudokuGame\SudokuGame\bin\Debug\SudokuGame.pdb
+C:\Users\x\Documents\Visual Studio 2015\Projects\SudokuGame\SudokuGame\obj\Debug\SudokuGame.csprojResolveAssemblyReference.cache
+C:\Users\x\Documents\Visual Studio 2015\Projects\SudokuGame\SudokuGame\obj\Debug\SudokuGame.Main.resources
+C:\Users\x\Documents\Visual Studio 2015\Projects\SudokuGame\SudokuGame\obj\Debug\SudokuGame.Properties.Resources.resources
+C:\Users\x\Documents\Visual Studio 2015\Projects\SudokuGame\SudokuGame\obj\Debug\SudokuGame.StartScreen.resources
+C:\Users\x\Documents\Visual Studio 2015\Projects\SudokuGame\SudokuGame\obj\Debug\SudokuGame.csproj.GenerateResource.Cache
+C:\Users\x\Documents\Visual Studio 2015\Projects\SudokuGame\SudokuGame\obj\Debug\SudokuGame.exe
+C:\Users\x\Documents\Visual Studio 2015\Projects\SudokuGame\SudokuGame\obj\Debug\SudokuGame.pdb
+C:\Users\x\Documents\Visual Studio 2015\Projects\SudokuGame\SudokuGame\obj\Debug\SudokuGame.Game.resources
