@@ -9,3 +9,15 @@ C:\Users\x\Documents\Visual Studio 2015\Projects\SudokuGame\SudokuGame\obj\Debug
 C:\Users\x\Documents\Visual Studio 2015\Projects\SudokuGame\SudokuGame\obj\Debug\SudokuGame.exe
 C:\Users\x\Documents\Visual Studio 2015\Projects\SudokuGame\SudokuGame\obj\Debug\SudokuGame.pdb
 C:\Users\x\Documents\Visual Studio 2015\Projects\SudokuGame\SudokuGame\obj\Debug\SudokuGame.Game.resources
+D:\My files\Programming\CSharpProjects\SudokuGameDesktop\SudokuGame\SudokuGame\bin\Debug\SudokuGame.exe.config
+D:\My files\Programming\CSharpProjects\SudokuGameDesktop\SudokuGame\SudokuGame\obj\Debug\SudokuGame.exe
+D:\My files\Programming\CSharpProjects\SudokuGameDesktop\SudokuGame\SudokuGame\obj\Debug\SudokuGame.pdb
+D:\My files\Programming\CSharpProjects\SudokuGameDesktop\SudokuGame\SudokuGame\bin\Debug\SudokuGame.exe
+D:\My files\Programming\CSharpProjects\SudokuGameDesktop\SudokuGame\SudokuGame\bin\Debug\SudokuGame.pdb
+D:\My files\Programming\CSharpProjects\SudokuGameDesktop\SudokuGame\SudokuGame\obj\Debug\SudokuGame.csprojResolveAssemblyReference.cache
+D:\My files\Programming\CSharpProjects\SudokuGameDesktop\SudokuGame\SudokuGame\obj\Debug\SudokuGame.Game.resources
+D:\My files\Programming\CSharpProjects\SudokuGameDesktop\SudokuGame\SudokuGame\obj\Debug\SudokuGame.Main.resources
+D:\My files\Programming\CSharpProjects\SudokuGameDesktop\SudokuGame\SudokuGame\obj\Debug\SudokuGame.Properties.Resources.resources
+D:\My files\Programming\CSharpProjects\SudokuGameDesktop\SudokuGame\SudokuGame\obj\Debug\SudokuGame.StartScreen.resources
+D:\My files\Programming\CSharpProjects\SudokuGameDesktop\SudokuGame\SudokuGame\obj\Debug\SudokuGame.csproj.GenerateResource.Cache
+D:\My files\Programming\CSharpProjects\SudokuGameDesktop\SudokuGame\SudokuGame\obj\Debug\SudokuGame.LevelSelection.resources

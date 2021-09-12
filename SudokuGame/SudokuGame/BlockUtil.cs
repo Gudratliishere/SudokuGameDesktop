@@ -26,6 +26,7 @@ namespace SudokuGame
                             textBoxGrid[i, j].ForeColor = Color.Black;
                             textBoxGrid[i, j].Tag = "native";
                             textBoxGrid[i, j].ReadOnly = true;
+                            textBoxGrid[i, j].BackColor = Color.White;
                         }
                         if (textBoxGrid[i, j].Tag != null && textBoxGrid[i, j].Tag.Equals("native"))
                             textBoxGrid[i, j].ForeColor = Color.Black;

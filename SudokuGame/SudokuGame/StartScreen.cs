@@ -66,9 +66,9 @@ namespace SudokuGame
         {
             main.Controls.Clear();
 
-            Game game = new Game();
-            game.mainObject = main;
-            main.Controls.Add(game);
+            LevelSelection lvl = new LevelSelection();
+            lvl.Main = main;
+            main.Controls.Add(lvl);
         }
     }
 }

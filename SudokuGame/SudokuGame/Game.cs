@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SudokuGame
@@ -14,45 +8,24 @@ namespace SudokuGame
     {
         private const int GRID_SIZE = 9;
 
+        private int numberOfMistakes = 0;
+        private int numberOfTips = 0;
+
         private bool gameContinue = true;
 
         private long time = 0;
 
         Main main;
 
-        public Game()
+        public Game(int level)
         {
             InitializeComponent();
             initGame();
 
             timer_gameTime.Start();
 
-            int[,] grid = {
-                {9, 3, 0, 2, 7, 0, 0, 5, 0},
-                {0, 8, 0, 0, 3, 5, 9, 2, 0},
-                {6, 0, 5, 0, 0, 1, 4, 7, 3},
-                {7, 4, 0, 1, 9, 0, 5, 0, 0},
-                {5, 0, 0, 8, 6, 0, 0, 4, 2},
-                {3, 0, 0, 0, 2, 0, 1, 0, 7},
-                {0, 1, 3, 0, 4, 9, 0, 8, 0},
-                {0, 0, 9, 0, 0, 0, 7, 0, 0},
-                {0, 0, 0, 0, 0, 0, 2, 0, 0}
-            };
-
-            int[,] grid2 = {
-                { 9, 3, 4, 2, 7, 6, 8, 5, 1},
-                { 1, 8, 7, 4, 3, 5, 9, 2, 6},
-                { 6, 2, 5, 9, 8, 1, 4, 7, 3},
-                { 7, 4, 2, 1, 9, 2, 5, 6, 8},
-                { 5, 9, 1, 8, 6, 7, 3, 4, 2},
-                { 3, 6, 8, 5, 2, 4, 1, 9, 7},
-                { 2, 1, 3, 7, 4, 9, 6, 8, 5},
-                { 8, 5, 9, 6, 1, 2, 7, 3, 4},
-                { 4, 7, 6, 3, 5, 8, 2, 0, 0}
-            };
-
-            GameLogic.Grid = grid2;
-            BlockUtil.fillTextBoxGrid(grid2, getTextBoxGrid(), true);
+            GameLogic.generateGrid(level);
+            BlockUtil.fillTextBoxGrid(GameLogic.Grid, getTextBoxGrid(), true);
         }
 
         private void initGame()
@@ -86,7 +59,7 @@ namespace SudokuGame
                        }
 
                        //It checks there is that value in row, column and box or not
-                       if (char.IsDigit(e.KeyChar))
+                       if (char.IsDigit(e.KeyChar) && tb_block.Text.Length == 0)
                        {
                            int number = Int32.Parse(e.KeyChar.ToString());
                            int X = BlockUtil.getXYOfBlock(tb_block)[0];
@@ -97,6 +70,8 @@ namespace SudokuGame
                            {
                                tb_block.ForeColor = Color.Red;
                                tb_block.Tag = "wrong";
+                               numberOfMistakes++;
+                               lbl_numberOfMistakes.Text = "Mistakes: " + numberOfMistakes;
                            }
                            else
                            {
@@ -106,19 +81,19 @@ namespace SudokuGame
                        }
                    });
 
-                    //It writes number in textbox to gri
                     tb_block.KeyUp += new KeyEventHandler(delegate (Object o, KeyEventArgs e)
                     {
+                        //It writes number in textbox to grid
                         GameLogic.Grid = BlockUtil.convertTextBoxGridToIntGrid(getTextBoxGrid());
 
-                        if (GameLogic.isGameFinished())
+                        //It checks game is finished or not
+                        TextBox[,] textBoxGrid = getTextBoxGrid();
+                        if (GameLogic.isGameFinished(textBoxGrid))
                         {
                             timer_gameTime.Stop();
 
-                            TextBox[,] textBoxGrid = getTextBoxGrid();
-                            for (int row = 0; row < GRID_SIZE; row++)
-                                for (int column = 0; column < GRID_SIZE; column++)
-                                    textBoxGrid[row, column].ForeColor = Color.Green;
+                            btn_play.Enabled = false;
+                            btn_tip.Enabled = false;
                         }
                     });
 
@@ -224,6 +199,24 @@ namespace SudokuGame
             }
 
             return blocks;
+        }
+
+        private void btn_tip_Click(object sender, EventArgs e)
+        {
+            numberOfTips++;
+            lbl_numberOfTips.Text = "Tips: " + numberOfTips;
+
+            GameLogic.getTip();
+
+            BlockUtil.fillTextBoxGrid(GameLogic.Grid, getTextBoxGrid(), false);
+
+            if (GameLogic.isGameFinished(getTextBoxGrid()))
+            {
+                timer_gameTime.Stop();
+
+                btn_play.Enabled = false;
+                btn_tip.Enabled = false;
+            }
         }
     }
 }

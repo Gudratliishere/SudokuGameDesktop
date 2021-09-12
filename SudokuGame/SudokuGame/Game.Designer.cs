@@ -36,6 +36,9 @@
             this.pnl_time = new System.Windows.Forms.Panel();
             this.flp_sudokuTemplate = new System.Windows.Forms.FlowLayoutPanel();
             this.timer_gameTime = new System.Windows.Forms.Timer(this.components);
+            this.lbl_numberOfMistakes = new System.Windows.Forms.Label();
+            this.btn_tip = new System.Windows.Forms.Button();
+            this.lbl_numberOfTips = new System.Windows.Forms.Label();
             this.pnl_time.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,11 +108,49 @@
             this.timer_gameTime.Interval = 1000;
             this.timer_gameTime.Tick += new System.EventHandler(this.timer_gameTime_Tick);
             // 
+            // lbl_numberOfMistakes
+            // 
+            this.lbl_numberOfMistakes.AutoSize = true;
+            this.lbl_numberOfMistakes.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_numberOfMistakes.ForeColor = System.Drawing.Color.White;
+            this.lbl_numberOfMistakes.Location = new System.Drawing.Point(30, 367);
+            this.lbl_numberOfMistakes.Name = "lbl_numberOfMistakes";
+            this.lbl_numberOfMistakes.Size = new System.Drawing.Size(88, 19);
+            this.lbl_numberOfMistakes.TabIndex = 7;
+            this.lbl_numberOfMistakes.Text = "Mistakes: 0";
+            // 
+            // btn_tip
+            // 
+            this.btn_tip.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_tip.BackgroundImage")));
+            this.btn_tip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_tip.FlatAppearance.BorderSize = 0;
+            this.btn_tip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_tip.Location = new System.Drawing.Point(34, 74);
+            this.btn_tip.Name = "btn_tip";
+            this.btn_tip.Size = new System.Drawing.Size(42, 40);
+            this.btn_tip.TabIndex = 8;
+            this.btn_tip.UseVisualStyleBackColor = true;
+            this.btn_tip.Click += new System.EventHandler(this.btn_tip_Click);
+            // 
+            // lbl_numberOfTips
+            // 
+            this.lbl_numberOfTips.AutoSize = true;
+            this.lbl_numberOfTips.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_numberOfTips.ForeColor = System.Drawing.Color.White;
+            this.lbl_numberOfTips.Location = new System.Drawing.Point(30, 334);
+            this.lbl_numberOfTips.Name = "lbl_numberOfTips";
+            this.lbl_numberOfTips.Size = new System.Drawing.Size(59, 19);
+            this.lbl_numberOfTips.TabIndex = 9;
+            this.lbl_numberOfTips.Text = "Tips: 0";
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.lbl_numberOfTips);
+            this.Controls.Add(this.btn_tip);
+            this.Controls.Add(this.lbl_numberOfMistakes);
             this.Controls.Add(this.flp_sudokuTemplate);
             this.Controls.Add(this.btn_stop);
             this.Controls.Add(this.pnl_time);
@@ -119,6 +160,7 @@
             this.pnl_time.ResumeLayout(false);
             this.pnl_time.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -129,5 +171,8 @@
         private System.Windows.Forms.Panel pnl_time;
         private System.Windows.Forms.FlowLayoutPanel flp_sudokuTemplate;
         private System.Windows.Forms.Timer timer_gameTime;
+        private System.Windows.Forms.Label lbl_numberOfMistakes;
+        private System.Windows.Forms.Button btn_tip;
+        private System.Windows.Forms.Label lbl_numberOfTips;
     }
 }
